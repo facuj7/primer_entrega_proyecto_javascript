@@ -1,0 +1,55 @@
+//MIXIN
+@mixin colorMixin ($background-image) {
+    background-image: $background-image;
+}
+body{ @include colorMixin (grey) 
+}
+
+@mixin size ($width, $height) {
+    width: $width;
+    height: $height;
+}
+body{
+    @include size (100%, 100%);
+//MAP APLICADO SOBRE BOTONES DE OBRA PUBLICA Y PRIVADA EN INDEX.
+}
+$privadas: (
+//key-valor
+color-privadas: white,
+bg-privadas: #1478BE,
+border-privadas: 1px solid black,
+);
+$publicas: (
+//key-valor
+color-publicas: green,
+bg-publicas: pink,
+border-publicas: 1px solid black,
+);
+
+.privadas{
+    background-color: map-get($map: $privadas, $key: bg-privadas);
+}
+.publicas{
+    background-color: map-get($map: $publicas, $key: bg-publicas );
+}
+.buttons {
+    min-width: 700px;
+    display: flex;
+    justify-content: space-around;
+  }
+.buttons a {
+    text-decoration: none;
+    font-size: 28px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background: #314652;
+    color: #f1f1f1;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+    transition: all .4s ease-in-out;
+  }
+.buttons a:hover {
+    transform: scale(1.2);
+  }

@@ -1,0 +1,98 @@
+// listas
+$colores:
+red,
+yellow,
+pink,
+black,
+green;
+
+//Luego asignar con número el color que se quiera asignar a los H1,H2,H3,etc
+
+h3{
+    color: nth($colores, 5);
+}
+//MIXINS
+
+//mixin con parámetro
+@mixin size ($width, $height) {
+    width: $width;
+    height: $height;
+}
+main{
+    @include size (500px, 50px);
+    @include flex;
+}
+//mixin sin parámetro
+@mixin flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+//mapas
+
+$privadas: (
+//key-valor
+color-privadas: white,
+bg-privadas: black,
+border-privadas: 1px solid green,
+);
+$publicas: (
+//key-valor
+color-publicas: pink,
+bg-publicas: black,
+border-publicas: 1px solid blue,
+);
+
+.privadas{
+    background-color: map-get($map: $privadas, $key: bg-privadas);
+}
+.publicas{
+    background-color: map-get($map: $publicas, $key: bg-publicas );
+}
+//extends
+
+%borde{
+    border: 1px solid black;
+    border-radius: 40px;
+    padding: 1rem;
+}
+
+div{
+    background-color: red;
+    box-shadow: 1px 1px black;
+    @extend %borde;
+}
+// ejemplo de extends y mixins
+
+@mixin flex-dos{
+    display: flex;
+    justify-content: center;
+};
+%extend estilos{
+    padding: 30px;
+    margin: 40px;
+    background-color: black;
+};
+header{
+    @include flex-dos;
+    @extend estilos;
+}
+//condicionales
+@mixin condicion($color){
+    //condicional
+    @if $color == orange{
+        border: 1px solid black;
+    }
+    @else{
+        border: 2px solid pink;
+    } 
+}
+.boton-uno{
+    @include condicion(orange)
+}
+
+//para proyecto final nesting, variables con colores, operacion suma, resta, etc. Mixing y condicionales.
+//boostrap aplicar carrusel. nav. menu hamburguesa. etc
