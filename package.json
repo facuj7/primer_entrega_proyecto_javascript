@@ -213,6 +213,7 @@
     "process-nextick-args": "^2.0.1",
     "promise-inflight": "^1.0.1",
     "promise-retry": "^2.0.1",
+    "prompt-sync": "^4.2.0",
     "psl": "^1.8.0",
     "pstree.remy": "^1.1.8",
     "pump": "^3.0.0",

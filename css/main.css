@@ -80,7 +80,7 @@ body {
   body a {
     color: black; }
   body h2 {
-    color: #FFC300;
+    color: black;
     padding: 2rem;
     margin: 2rem;
     background-color: #DAF7A6; }
@@ -308,7 +308,11 @@ body {
   body .grilla {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "header2 header2" "section1 section1" "section2 main" "aside main" "footer2 footer2";
+    grid-template-areas: "header2 header2"
+ "section1 section1"
+ "section2 main"
+ "aside main"
+ "footer2 footer2";
     justify-content: center;
     margin: 0 auto;
     margin-top: 40px; }
