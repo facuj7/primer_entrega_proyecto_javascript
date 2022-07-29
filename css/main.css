@@ -10,6 +10,18 @@ body {
   width: 100%;
   height: 100%; }
 
+/*css proyecto Javascript */
+
+.formu {
+  margin: 1.5rem;
+  border-radius: 0.5rem;
+  border: 2px solid black;
+  background-color: #DAF7A6;
+  padding: 0.5rem;
+  margin: 1rem;
+  text-align: center;
+}
+
 .privadas {
   background-color: #1478BE; }
 
@@ -85,15 +97,19 @@ body {
     margin: 2rem;
     background-color: #DAF7A6; }
   body h3 {
-    color: #258BD3;
+    color: black;
     text-align: center;
     font-family: 'League Gothic', sans-serif;
     font-family: 'Roboto', sans-serif;
     padding: 1rem;
     margin: 1rem;
     font-size: 1.5rem; }
+  body h4 {
+    color: darkblue;
+    text-align: center;
+  }
   body p {
-    color: #115F96;
+    color: black;
     text-align: center;
     padding: 1rem;
     margin: 1rem;
@@ -364,3 +380,7 @@ body {
     transition: all .4s ease-in-out; }
   body .buttons a:hover {
     transform: scale(1.2); }
+
+body .tipolo {
+  text-align: left;
+}

@@ -49,7 +49,7 @@
 
     /*prueba con if*/
     
-    alert(`Las características de su tipología:`)
+    alert(`A continuación, más detalles de la tipología seleccionada`)
     /*las caracteristicas figuran por consola*/
     const array =[];
     console.log(modelo)
@@ -79,11 +79,11 @@ function descuento(num1, num2){
 
 /*Seccion*/    
 
+
 let padre = document.getElementById("seccion");    
 /* CREACION DIV SECCION */
-let parrafo = document.createElement("p");
-
-parrafo.innerHTML = "<h1>En esta sección, podrás ver los detalles de nuestras tipologías</h1>";
+let parrafo = document.createElement("h1");
+parrafo.innerHTML = "<h4>Nuestras viviendas son desarroladas por excelentes profesionales, mano de obra calificada y materiales de primera calidad</h4>";
 
 padre.append(parrafo);
 
@@ -99,10 +99,10 @@ for(const producto of productos){
     let li = document.createElement("li");
     li.innerHTML = `<h3>ID: ${producto.id}</h3>
                     <p>Producto: ${producto.tipologia}</p>
-                    <b>Precio: $${producto.precio}</b>
+                    <p>Precio: $${producto.precio}</p>
                     <p>Habitaciones: ${producto.habitaciones}</p>
                     <p>Baños: ${producto.baños}</p>
-                    <b>Descuento: $${producto.descuento}</b>
+                    <p>Descuento: $${producto.descuento}</p>
                     <p>Foto: ${producto.foto}</p>
                     <img src="${producto.img}">
                     `;
@@ -118,3 +118,21 @@ let calcu = document.createElement("h2");
 calcu.innerHTML = "<h2>Calculadora para descuento</h2>";
 
 descu.append(calcu);
+
+let nombre = document.getElementById("nombre");
+nombre.addEventListener("input", (e) =>{
+})
+
+/* Probando Storage - JSON */
+
+/* localStorage.setItem("casa1", {tipologia: "THOUSE", precio: 50000, habitaciones: 2, baños: 1}); */ 
+
+
+/* let objeto = {tipologia: "THOUSE", precio: 50000, habitaciones: 2, baños: 1} 
+localStorage.setItem("objeto", JSON.stringify(objeto)); */
+
+let objeto = localStorage.getItem("objeto");
+console.log(JSON.parse(objeto));
+
+
+

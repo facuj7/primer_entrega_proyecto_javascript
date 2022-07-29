@@ -4,9 +4,10 @@
     box-sizing: border-box; 
 }
 // estilo en sass
-//variables
-@import "utilities/variables";
-@import "layout/obras";
+//variables bloqueados por // 
+
+// @import "utilities/variables";
+// @import "layout/obras"; 
 
 body{
     background-image: linear-gradient(to right, #5FA895, #9CF9E1, #BCEDE0);
@@ -55,8 +56,8 @@ h2{
     background-color: #DAF7A6;       
 }
 h3{
-    color: #258BD3;
-    text-align: center;
+    color: black;
+    text-align: left;
     font-family: 'League Gothic', sans-serif;
     font-family: 'Roboto', sans-serif;
     padding: 1rem;
@@ -64,7 +65,7 @@ h3{
     font-size: 1.5rem;
 }
 p{
-    color: #115F96; 
+    color: black; 
     text-align: center;
     padding: 1rem;
     margin: 1rem;
@@ -396,4 +397,5 @@ aside{
 .buttons a:hover {
     transform: scale(1.2);
   }
+
 }
