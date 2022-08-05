@@ -38,19 +38,34 @@
             </div>
             <h3 class="tipolo">En esta sección, podrás ver los detalles de nuestras tipologías</h3>
             
-            <form class="formu" id="formulario">
-                <input type="text" id="nombre">
-                <input type="number">
-                <input type="submit" value="Enviar"> 
-            </form>
+            <p>Selecciona la tipología deseada para ver sus características</p>
+        
+        <div class="botones">    
+            
+            <button id="boton1">TALLHOUSE</button>
+            
+            <button id="boton2">THOUSE</button>
+            
+            <button id="boton3">EVOHOUSE</button>
+            
+        </div>
             
             <div id="seccion">
                 <ul id="container"></ul>
-            </div> 
-                <div id="descuento">
-                    <input type="number">
-                    <input type="number">
-                </div>
+            </div>
+
+            <form class="formu" id="formulario">
+                <input type="text" id="nombre">
+                <input type="number">
+                <input type="submit"> 
+            </form>
+            
+        <h2 class="calcula">Calculadora para descuento</h2>
+
+            <div class="calc" id="descuento">
+                <input class="uno" type="number">
+                <input class="dos" type="number">
+            </div>
 
     </section>
         <section class="buttons">
@@ -59,7 +74,7 @@
             <a href="#" class="fa fa-google-plus"></a>
             <a href="#" class="fa fa-youtube"></a>
             <a href="#" class="fa fa-linkedin"></a>
-    </section>
+        </section>
         <div class="footer2">
             <footer id="irFooter">
                 <ul class="footer2">
@@ -77,6 +92,7 @@
             </section>
         </div>
 
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="./index.js"></script>
 </body>
 </html>

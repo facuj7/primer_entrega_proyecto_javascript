@@ -22,6 +22,33 @@ body {
   text-align: center;
 }
 
+.botones{
+  border: black;
+  text-align: center;
+  padding: 0.5rem;
+  margin: 1rem;
+  background-color: #5FA895;
+}
+
+.calcula{
+  text-align: center;
+  color: black;
+  padding: 2rem;
+  margin: 2rem;
+  background-color: #DAF7A6;
+}
+
+.uno{
+  text-align: center;
+}
+
+.dos{
+  text-align: center;
+}
+
+.calc{
+  text-align: center;
+}
 .privadas {
   background-color: #1478BE; }
 
@@ -325,10 +352,10 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "header2 header2"
- "section1 section1"
- "section2 main"
- "aside main"
- "footer2 footer2";
+                         "section1 section1"
+                          "section2 main"
+                         "aside main"
+                          "footer2 footer2";
     justify-content: center;
     margin: 0 auto;
     margin-top: 40px; }
@@ -383,4 +410,5 @@ body {
 
 body .tipolo {
   text-align: left;
+  background-color: #DAF7A6;
 }
