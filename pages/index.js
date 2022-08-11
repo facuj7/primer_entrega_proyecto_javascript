@@ -53,7 +53,7 @@
     
     /*prueba con if*/
     
-    alert(`A continuación, más detalles de la tipología seleccionada`)
+    alert(`A continuación, más detalles de nuestras tipologías`)
     /*las caracteristicas figuran por consola*/
     const array =[];
     console.log(modelo)
@@ -146,11 +146,17 @@ localStorage.setItem("objeto", JSON.stringify(objeto)); */
 let objeto = localStorage.getItem("objeto");
 console.log(JSON.parse(objeto));
 
-/*Aplicando libreria*/
+/*Aplicando libreria ALERTA EN BOTONES EN LOS NOMBRES DE LAS TIPOLOGIAS, TRAE LAS CARACTERÍSTICAS DE LAS MISMAS*/
 
 let button = document.getElementById("boton1");
 
-button.addEventListener("click", () => { 
+button.addEventListener("click", (color1) => { 
+    boton1.classList.add();
+    setTimeout(() =>{
+        boton1.classList.remove(color1);
+        
+    },3000);
+    
     Swal.fire({
       icon: 'ok',
       title: 'TIPOLOGIA: TALLHOUSE',
@@ -161,8 +167,8 @@ button.addEventListener("click", () => {
     });
 
 let button = document.getElementById("boton2");
-button.addEventListener("click", () => { 
-    Swal.fire({
+    button.addEventListener("click", () => { 
+        Swal.fire({
         icon: 'ok',
         title: 'TIPOLOGIA: THOUSE',
         text: "Precio: $50.000, Habitaciones: 2, Baños: 1, Descuento: $10.000", 
@@ -170,9 +176,9 @@ button.addEventListener("click", () => {
         imageUrl: 'https://placeholder.pics/svg/500x400',
           
         });
-        let button = document.getElementById("boton3");
-button.addEventListener("click", () => { 
-    Swal.fire({
+let button = document.getElementById("boton3");
+    button.addEventListener("click", () => { 
+        Swal.fire({
         icon: 'ok',
         title: 'TIPOLOGIA: EVOHOUSE',
         text: "Precio: $100.000, Habitaciones: 4, Baños: 3, Descuento: $20.000", 
@@ -181,5 +187,49 @@ button.addEventListener("click", () => {
           
             });
         });
+    });
+});
+
+
+// PRACTICA FETCH //
+
+/* const lista = document.getElementBtId("container"); */
+
+/*
+fetch()
+.then(response => response.json())
+.then(tipologias => {
+    tipologias.forEach(tipologias => {
+        const li = document.createElement("li");
+        li.innerHTML = `
+        <h1>${tipologias.title}</h1>
+        <h3>${tipologias.title}</h3>
+        <p>${tipologias.body}</p>
+        `;
+
+        lista.append(li);
+    }); */
+    
+// APLICANDO FETCH A LA LISTA DE TIPOLOGIAS //
+
+    const lista = document.getElementById("tipohogar");
+
+    fetch("./data.json")
+    .then(response => response.json())
+    .then(productos => {
+        productos.forEach(producto => {
+
+        const li = document.createElement("li");
+        li.innerHTML = `
+        <h4>${producto.tipologia}</h4>
+        <p>Precio: $${producto.precio}</p>
+        <p>Habitaciones: ${producto.habitaciones}</p>
+        <p>baños: ${producto.baños}</p>
+        <p>Descuento: $${producto.descuento}</p>
+        <p>Foto: ${producto.foto}</p>
+        <hr />
+        `;
+
+        lista.append(li);
     });
 });

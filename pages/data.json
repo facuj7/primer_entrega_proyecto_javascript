@@ -1,0 +1,4 @@
+[
+    {"id": 1, "tipologia": "THOUSE", "precio": 50000, "habitaciones": 2, "baños": 1, "descuento": 10000, "foto": "fotocasa1"},
+    {"id": 2, "tipologia": "TALLHOUSE", "precio": 70000, "habitaciones": 3, "baños": 2, "descuento": 15000, "foto": "fotocasa2"},
+    {"id": 3, "tipologia": "EVOHOUSE", "precio": 100000, "habitaciones": 4, "baños": 3, "descuento": 20000, "foto": "fotocasa3"}]
