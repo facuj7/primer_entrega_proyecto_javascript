@@ -42,9 +42,7 @@
         
         <div class="botones">        
             <button id="boton1">TALLHOUSE</button>
-            
             <button id="boton2">THOUSE</button>
-            
             <button id="boton3">EVOHOUSE</button>    
         </div>
 
@@ -53,22 +51,29 @@
             <div id="seccion">
                 <ul id="container"></ul>
             </div>
-
+            <h4 class="comunicamos">Nos comunicamos con vos</h4>
             <form class="formu" id="formulario">
-            
                 <input type="text" id="nombre" placeholder="Carga tú nombre">
-                <input type="number" placeholder="Carga tú teléfono">
-                <input type="submit"> 
+                <input type="number" id="telefono" placeholder="Carga tú teléfono">
+                <input type="email" id="email" placeholder="Carga tú email">
+                <input id="enviar" type="submit" value="Enviar"> 
             </form>
+            <!--Calculadora de descuento con Javascript-->
+        <h2 class="calcula">Calculadora para descuento
+        </h2>
+
+        <form class="calc" id="descuento">
+            <label for="Precio"></label>
+            <input class="uno" type="number" id="valor1" placeholder="Precio Tipología">
+            <label for="Descuento"></label>
+            <input class="dos" type="number" id="valor2"    placeholder="Descuento Promo">
+            <!--Botón con funcion restar para cálculo de descuento-->
+            <button class="resu" id="valor3" type="button" onclick="restar();">APLICAR DESCUENTO</button>
+            <p><button type="reset">Limpiar campos</button></p>
+           <!--<button onclick="limpiar();">Limpiar campos</button>-->
+            <p class="resultado">El precio con descuento es: <span id="el-resultado"></span></p>
+        </form>
             
-        <h2 class="calcula">Calculadora para descuento</h2>
-
-            <div class="calc" id="descuento">
-                <input class="uno" type="number" placeholder="Precio">
-                <input class="dos" type="number" placeholder="Descuento">
-                <input class="resultado" type="number" placeholder="Resultado">
-            </div>
-
     </section>
         <section class="buttons">
             <a href="#" class="fa fa-facebook"></a>

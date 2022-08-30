@@ -1,3 +1,5 @@
+/*SE TRABAJO SIEMPRE SOBRE LA PÁGINA: tipoligias.
+
 /* class Productos {
     constructor(tipologia, precio, habitaciones, baños,     descuento, img) {
         this.tipologia = tipologia;
@@ -32,9 +34,9 @@
 
     /*PROBANDO ALTERNATIVA */
     const productos = [
-        {id: 1, tipologia: "THOUSE", precio: 50000, habitaciones: 2, baños: 1, descuento: 10000, foto: "fotocasa1"},
-        {id: 2, tipologia: "TALLHOUSE", precio: 70000, habitaciones: 3, baños: 2, descuento: 15000, foto: "fotocasa2"},
-        {id: 3, tipologia: "EVOHOUSE", precio: 100000, habitaciones: 4, baños: 3, descuento: 20000, foto: "foto casa3"},
+        {id: 1, tipologia: "THOUSE", precio: 50000, habitaciones: 2, baños: 1, descuento: 10000, img:"/img.obras/CASA7.png"},
+        {id: 2, tipologia: "TALLHOUSE", precio: 70000, habitaciones: 3, baños: 2, descuento: 15000, img:"/img.obras/CASA3.png"},
+        {id: 3, tipologia: "EVOHOUSE", precio: 100000, habitaciones: 4, baños: 3, descuento: 20000, img:"/img.obras/CASA1.png"},
     ];
     
     /* EJEMPLO PARA BUSCAR INFORMACIÓN DE LA TIPOLOGÍA DESEADA*/
@@ -43,17 +45,16 @@
 
     const modelo = [];
     let producto
-    let entrada = prompt("Ingrese el nombre de su producto para ver detalles o escriba ESC para salir:\nTHOUSE\nTALLHOUSE\nEVOHOUSE").toUpperCase();
+    /*let entrada = prompt("Ingrese el nombre de su producto para ver detalles o escriba ESC para salir:\nTHOUSE\nTALLHOUSE\nEVOHOUSE").toUpperCase();
     
     while (entrada !="ESC"){
         producto = productos.find(item => item.id === entrada);
         modelo.push(producto);
         entrada = prompt("Ingrese el nombre de su producto para ver detalles o escriba ESC para salir:\nTHOUSE\nTALLHOUSE\nEVOHOUSE").toUpperCase();
-    }
+    } */
     
     /*prueba con if*/
     
-    alert(`A continuación, más detalles de nuestras tipologías`)
     /*las caracteristicas figuran por consola*/
     const array =[];
     console.log(modelo)
@@ -70,20 +71,34 @@
     );
 */        
 
-/*Funcion para descuento, operación*/
+/*Funcion para descuento, operación. Luego desarrolle una "calculadora de descuento" simulada en el html "tipologías"*/
 
 function descuento(num1, num2){
     return num1 - num2;
-}
-    
+} 
     let num1 = parseInt(prompt("ingrese el valor de su vivienda"));
     let num2 = parseInt(prompt("ingrese descuento pactado con vendedor"));
     let resultado = num1 - num2; 
     alert(resultado) 
+    alert(`A continuación, más detalles de nuestras tipologías`)
+
+/*calculadora de descuento*/
+function restar() {
+    var x = parseInt(document.getElementById('valor1').value);
+    var y = parseInt(document.getElementById('valor2').value);
+    document.getElementById('el-resultado').innerHTML = x-y;
+}
+/*Funcion para limpiar los campos*/
+function limpiar() {
+    document.getElementById('descuento').reset();
+} 
+
+/*Formulario*/
+enviar.addEventListener('click', function (e) {
+    e.preventDefault();
+});
 
 /*Seccion*/    
-
-
 let padre = document.getElementById("seccion");    
 /* CREACION DIV SECCION */
 let parrafo = document.createElement("h1");
@@ -94,20 +109,18 @@ padre.append(parrafo);
 /*tipologias*/
 let contenedor = document.getElementById("container");
 let tipos = [
-    {id: 1, tipologia: "THOUSE", precio: 50000, habitaciones: 2, baños: 1, descuento: 10000, foto: "fotocasa1"},
-    {id: 2, tipologia: "TALLHOUSE", precio: 70000, habitaciones: 3, baños: 2, descuento: 15000, foto: "fotocasa2"},
-    {id: 3, tipologia: "EVOHOUSE", precio: 100000, habitaciones: 4, baños: 3, descuento: 20000, foto: "foto casa3"},
+    {id: 1, tipologia: "THOUSE", precio: 50000, habitaciones: 2, baños: 1, descuento: 10000,},
+    {id: 2, tipologia: "TALLHOUSE", precio: 70000, habitaciones: 3, baños: 2, descuento: 15000,},
+    {id: 3, tipologia: "EVOHOUSE", precio: 100000, habitaciones: 4, baños: 3, descuento: 20000,},
 ]; 
 
 for(const producto of productos){
     let li = document.createElement("li");
-    li.innerHTML = `<h3>ID: ${producto.id}</h3>
-                    <p>Producto: ${producto.tipologia}</p>
+    li.innerHTML = `<h3>TIPOLOGIA: ${producto.tipologia}</h3>
                     <p>Precio: $${producto.precio}</p>
                     <p>Habitaciones: ${producto.habitaciones}</p>
                     <p>Baños: ${producto.baños}</p>
                     <p>Descuento: $${producto.descuento}</p>
-                    <p>Foto: ${producto.foto}</p>
                     <img src="${producto.img}">
                     `;
     contenedor.append(li)
@@ -117,7 +130,7 @@ for(const producto of productos){
 
 let descu = document.getElementById("descuento");    
 /* CREACION DIV DESCUENTO */
-
+ 
 let nombre = document.getElementById("nombre");
 nombre.addEventListener("input", (e) =>{
 }) 
@@ -134,19 +147,20 @@ if(tipo === "THOUSE"){
     console.log("ingresa una tipología existente")
 } 
 
-
-/* Probando Storage - JSON */
+/* Storage - JSON */
 
 /* localStorage.setItem("casa1", {tipologia: "THOUSE", precio: 50000, habitaciones: 2, baños: 1}); */ 
 
 
 /* let objeto = {tipologia: "THOUSE", precio: 50000, habitaciones: 2, baños: 1} 
-localStorage.setItem("objeto", JSON.stringify(objeto)); */
+localStorage.setItem("objeto", JSON.stringify(objeto));*/
+let arreglo = {tipologia: "THOUSE", precio: 50000, habitaciones: 2, baños: 1};
+localStorage.setItem("arreglo", JSON.stringify(arreglo));
 
 let objeto = localStorage.getItem("objeto");
 console.log(JSON.parse(objeto));
 
-/*Aplicando libreria ALERTA EN BOTONES EN LOS NOMBRES DE LAS TIPOLOGIAS, TRAE LAS CARACTERÍSTICAS DE LAS MISMAS*/
+/*Aplicando libreria ALERTA EN BOTONES EN LOS NOMBRES DE LAS TIPOLOGIAS, TRAE LAS CARACTERÍSTICAS DE LAS MISMAS, COMENZANDO POR boton1, tipología "TALLHOUSE"*/
 
 let button = document.getElementById("boton1");
 
@@ -162,8 +176,8 @@ button.addEventListener("click", (color1) => {
       title: 'TIPOLOGIA: TALLHOUSE',
       text: "Precio: $70.000, Habitaciones: 3, Baños: 2, Descuento: $15.000", 
       timer: 10000,
-      imageUrl: 'https://placeholder.pics/svg/500x400',
-      
+      img: '../img.obras/CASA1.png',
+      imageUrl: 'https://placeholder.pics/svg/500x400',    
     });
 
 let button = document.getElementById("boton2");
@@ -174,8 +188,8 @@ let button = document.getElementById("boton2");
         text: "Precio: $50.000, Habitaciones: 2, Baños: 1, Descuento: $10.000", 
         timer: 10000,
         imageUrl: 'https://placeholder.pics/svg/500x400',
-          
         });
+
 let button = document.getElementById("boton3");
     button.addEventListener("click", () => { 
         Swal.fire({
@@ -184,7 +198,7 @@ let button = document.getElementById("boton3");
         text: "Precio: $100.000, Habitaciones: 4, Baños: 3, Descuento: $20.000", 
         timer: 10000,
         imageUrl: 'https://placeholder.pics/svg/500x400',
-          
+        imgUrl: 'https://images.app.goo.gl/MN91oyFgtKQ7N1cp7',  
             });
         });
     });

@@ -36,6 +36,8 @@ body {
   padding: 2rem;
   margin: 2rem;
   background-color: #DAF7A6;
+  background-color: #DAF7A6;
+  border: 2px solid black; 
 }
 
 .uno{
@@ -45,13 +47,28 @@ body {
 .dos{
   text-align: center;
 }
-
 .calc{
   text-align: center;
+
+}
+.resultado{
+  text-align: center;
+  color: #314652;
+  background-color: #DAF7A6;
+  border: 5px solid brown;  
 }
 .color1{
   color: #FFC300;
 }
+.comunicamos{
+  color: black;
+  size: 25px;
+  background-color: #DAF7A6;
+  border: 2px solid black; 
+}
+
+/*css html*/
+
 .privadas {
   background-color: #1478BE; }
 
