@@ -103,7 +103,6 @@ let padre = document.getElementById("seccion");
 /* CREACION DIV SECCION */
 let parrafo = document.createElement("h1");
 parrafo.innerHTML = "<h4>Nuestras viviendas son desarroladas por excelentes profesionales, mano de obra calificada y materiales de primera calidad</h4>";
-
 padre.append(parrafo);
 
 /*tipologias*/
@@ -149,11 +148,56 @@ if(tipo === "THOUSE"){
 
 /* Storage - JSON */
 
+function guardarDatos() {
+    localStorage.nombre = document.getElementById("nombre").value;
+    localStorage.password = document.getElementById("password").value;
+}
+
+function recuperarDatos() {
+    if ((localStorage.nombre != undefined) && (localStorage.password != undefined)) {
+        document.getElementById("datos").innerHTML = "Nombre: " + localStorage.nombre + " Password: " + localStorage.password;
+    } else {
+        document.getElementById("datos").innerHTML = "No has introducido tu nombre y tu password";
+    }
+}
+
+/*  lst = [{
+    tipologia: "THOUSE", 
+    precio: 50000, 
+    habitaciones: 2, 
+    baños: 1, 
+    descuento: 10000, 
+    foto: "fotocasa1"},{
+        tipologia: "TALLHOUSE", 
+        precio: 70000, 
+        habitaciones: 3, 
+        baños: 2, 
+        descuento: 15000, 
+        foto: "fotocasa2"},{
+            tipologia: "EVOHOUSE", 
+            precio: 100000, 
+            habitaciones: 4, 
+            baños: 3, 
+            descuento: 20000, 
+            foto: "fotocasa3"
+}];
+
+localStorage.setItem("list", JSON.stringify(lst));
+
+lst = JSON.parse(localStorage.getItem("list")); 
+
+lst.forEach(lst => {
+let lst = document.getElementById("produ");
+let div = document.createElement("produ");
+div.innerHTML = lst.tipologia + "" + lst.precio + "" + lst.habitaciones + "" + lst.baños + "" + lst.descuento + "" + lst.foto;
+lst.appendChild(div);
+});*/
+
 /* localStorage.setItem("casa1", {tipologia: "THOUSE", precio: 50000, habitaciones: 2, baños: 1}); */ 
 
-
 /* let objeto = {tipologia: "THOUSE", precio: 50000, habitaciones: 2, baños: 1} 
-localStorage.setItem("objeto", JSON.stringify(objeto));*/
+localStorage.setItem("objeto", JSON.stringify(objeto));
+
 let arreglo = {tipologia: "THOUSE", precio: 50000, habitaciones: 2, baños: 1};
 localStorage.setItem("arreglo", JSON.stringify(arreglo));
 

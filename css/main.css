@@ -67,6 +67,34 @@ body {
   border: 2px solid black; 
 }
 
+.logueo{
+  text-align: right;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  background-color: #DAF7A6;
+  display: inline-block;
+}
+
+.datos{
+  text-align: right;
+}
+
+.guardar{
+  color: black;
+  text-align: right;
+  display: inline-block
+}
+
+.mostrar{
+  color: black;
+  text-align: right;
+  padding: 1rem;
+  margin: 1rem;
+  background-color: #A7ADAD;
+  display: inline-block
+
+}
+
 /*css html*/
 
 .privadas {

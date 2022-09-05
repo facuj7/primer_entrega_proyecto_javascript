@@ -36,21 +36,35 @@
                     </ul>
                 </nav>
             </div>
+        <!--Storage-JSON-->
+        <div class="logueo">
+            <label for="nombre">Usuario:</label>
+            <input type="text" id="nombre" />
+    
+            <label for="nombre">Contraseña:</label>
+            <input type="text" id="password" />
+            <input class="guardar" type="button" onclick="guardarDatos()" value="Guardar datos"/>
+            <br>
+            <input class="recuperar" type="button" onclick="recuperarDatos()" value="Ver usuario y contraseña" />
+            <p class="mostrar" id="datos">Tu usuario y contraseña es</p>
+        </div>
+
             <h3 class="tipolo">En esta sección, podrás ver los detalles de nuestras tipologías</h3>
             
             <p>Selecciona la tipología deseada para ver sus características</p>
-        
+    <!--Botones aplicando alert en JS, desde boton1 a boton3, muestran un alert con la características de las tipologias-->     
         <div class="botones">        
             <button id="boton1">TALLHOUSE</button>
             <button id="boton2">THOUSE</button>
             <button id="boton3">EVOHOUSE</button>    
         </div>
-
+    
         <ul id="tipohogar"></ul>
-            
-            <div id="seccion">
-                <ul id="container"></ul>
-            </div>
+        <div id="seccion">
+          <ul id="container"></ul>
+        </div>
+
+    <!--tipologias en JS de dos formas-->
             <h4 class="comunicamos">Nos comunicamos con vos</h4>
             <form class="formu" id="formulario">
                 <input type="text" id="nombre" placeholder="Carga tú nombre">
